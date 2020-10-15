@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root{
+  --font-roboto: 'Roboto', sans-serif;
+  --font-fira: 'Fira Code', monospace;
+  --terminal-color: #231F1F;
+  --circle-red: #FE5F56;
+  --circle-yellow: #FFBD2F;
+  --circle-green: #28C93F;
+  --terminal-text-primary: #0AFF8D;
+  --terminal-text-secondary: #FFFFFF;
+  --bg-dark: #151515;
+  --color-hover: #d61d4b; 
+}
+
+.hero{
+  font-family: var(--font-roboto);
+  /* background-color: yellow; */
+  padding: 1.5em;
+  height: 200px;
+}
+.nav{
+  padding: 10px;
+
+}
+.collection{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.items{
+  list-style: none;
+  margin: 0 20px;
+  font-size: 1.2em;
+}
+a.nav-link{
+  color: #333;
+  padding: 5px;
+  
+}
+.nav-link:hover{
+  border-radius: 4px;
+  animation: hov;
+  animation-duration: 2s;
+}
+@keyframes hov{
+  0%{
+    background-color: var(--terminal-text-secondary);
+  }
+  50%{
+    background-color: var(--circle-yellow );
+  }
+  
+}
+
+.showcase{
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--font-roboto);
+  margin-bottom: 40px;
+  padding: 20px;
+}
+.name{
+  font-size: 3em;
+  color: #d61d4b;
+}
+
+.footer{
+  position: relative;
+  top: 30px;
+ }
+ .end{
+   margin: 20px auto;
+   text-align: center;
+   font-family: var(--font-roboto);
+   font-weight: bold;
+   font-size: 12px;
+}
+.form{
+  background-color: var(--terminal-color);
+  height: 60vh;
+  border-radius: 4px;
+  max-width: 90%;
+  margin: auto;
+  padding: 1em;
+  text-align: center;
+}
+
+input{
+  border: none;
+  border-radius: 2px;
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 80%;
+  font-family: var(--font-roboto);
+}
+textarea.message{
+  height: 50px;
+  width: 80%;
+  padding: 2px;
+  border: none;
+  border-radius: 2px;
+  font-family: var(--font-roboto);
+}
+input:focus{
+  outline: none  ;
+}
+textarea:focus{
+  outline: none;
+}
+.submit-btn{
+  display: block;
+  padding: 8px;
+  color: #d61d4b;
+  font-family: var(--font-roboto);
+  border: 1px solid white;
+  border-radius: 4px;
+  width: 100px;
+  text-align: center;
+  margin: 10px auto;
+  font-weight: bold;
+}
+@media only screen and (min-width: 768px){
+  li.items{
+    font-size: 1.5em;
+  }
+  .name{
+    font-size: 5em;
+  }
+  .tag{
+    font-size: 1.5rem;
+  }
+  .form{
+    max-width: 80%;
+  }
+  input{
+    width: 50%;
+  }
+  textarea.message{
+    width: 50%;
+    height: 60px;
+  }
+  input:focus{
+    outline: none  ;
+    font-family: var(--font-roboto);
+  }
+
+}
